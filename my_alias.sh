@@ -8,8 +8,8 @@ MARKER="# ===== Ryuyx's Aliases ====="
 
 # Define the shell functions instead of aliases to handle arguments ($1) correctly
 ALIASES=(
-    "set-proxy() { export http_proxy=\"\$1\"; export https_proxy=\"\$1\"; }"
-    "unset-proxy() { unset http_proxy; unset https_proxy; }"
+    "set-proxy(){ export http_proxy=\"\$1\"; export https_proxy=\"\$1\"; }"
+    "unset-proxy(){ unset http_proxy; unset https_proxy; }"
 )
 
 # Check if the marker already exists in the config file
