@@ -75,7 +75,7 @@ EOF
             local t="${_e//[[:space:]]/}"
             [ -z "$t" ] && continue
             [ "$t" = "$item" ] && continue
-            if [ -z "$out" ]; then out="$t"; else out="$out,$t"; fi
+            if [ -z "$out" ] && [ -n "$t" ]; then out="$t"; elif [ -n "$t" ]; then out="$out,$t"; fi
         done
         echo "$out"
     }
@@ -150,7 +150,7 @@ EOF
             sub="$1"; [ -z "$sub" ] && { print_usage; return 1; }
             case "$sub" in
                 show)
-                    "$0" proxy list
+                    proxy list
                     ;;
                 set)
                     case "$2" in
