@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PROXY_FUNCTION='# Proxy control function
-proxy() {
+PROXY_FUNCTION='# Proxy control 
+function proxy() {
     if [ "$1" = "on" ]; then
         export http_proxy="http://127.0.0.1:7890"
         export https_proxy="http://127.0.0.1:7890"
@@ -24,7 +24,6 @@ proxy() {
     fi
 }'
 
-# 检查是否已存在该函数
 if grep -q "^proxy()" ~/.bashrc; then
     echo "proxy function already exists in ~/.bashrc"
 else
