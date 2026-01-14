@@ -1,18 +1,15 @@
 #!/bin/bash
 
-PROXY_FUNCTION='# Proxy control 
+PROXY_FUNCTION='
+# Proxy control 
 function proxy() {
     if [ "$1" = "on" ]; then
-        export http_proxy="http://127.0.0.1:7890"
-        export https_proxy="http://127.0.0.1:7890"
-        export HTTP_PROXY="http://127.0.0.1:7890"
-        export HTTPS_PROXY="http://127.0.0.1:7890"
+        export http_proxy="http://127.0.0.1:20170"
+        export https_proxy="http://127.0.0.1:20170"
         echo "[proxy] Proxy is ON"
     elif [ "$1" = "off" ]; then
         unset http_proxy
         unset https_proxy
-        unset HTTP_PROXY
-        unset HTTPS_PROXY
         echo "[proxy] Proxy is OFF"
     else
         if [ -n "$http_proxy" ]; then
