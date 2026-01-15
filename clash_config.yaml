@@ -1,0 +1,13 @@
+proxies:
+  - name: "121.43.105.100"
+    type: http
+    server: 121.43.105.100
+    port: 80
+    username: "xxx"
+    password: "xxx"
+  - name: "proxy.ilyx.top"
+    type: http
+    server: proxy.ilyx.top
+    port: 80
+    username: "xxx"
+    password: "xxx"
